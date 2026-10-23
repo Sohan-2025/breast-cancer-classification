@@ -1,0 +1,134 @@
+======================================================================
+STATISTICAL ANALYSIS RESULTS
+======================================================================
+
+1. SHAPIRO-WILK NORMALITY TEST
+----------------------------------------------------------------------
+                feature  shapiro_p_benign  shapiro_p_malignant
+            radius_mean      7.457649e-01         6.384334e-03
+           texture_mean      6.789548e-08         3.699969e-04
+         perimeter_mean      8.466353e-01         1.136261e-03
+              area_mean      3.261374e-02         1.621559e-07
+        smoothness_mean      1.219267e-06         2.959368e-02
+       compactness_mean      5.220440e-10         1.356581e-05
+         concavity_mean      5.743468e-22         6.442453e-06
+    concave_points_mean      1.092893e-07         1.400871e-04
+          symmetry_mean      3.917771e-04         6.871484e-05
+ fractal_dimension_mean      2.273003e-12         1.556162e-06
+              radius_se      1.115042e-12         8.680116e-14
+             texture_se      3.736375e-14         6.879077e-10
+           perimeter_se      3.695117e-11         6.673308e-15
+                area_se      6.697777e-13         1.042604e-18
+          smoothness_se      5.310623e-11         1.041587e-17
+         compactness_se      1.739386e-19         7.976952e-10
+           concavity_se      1.540266e-27         9.109580e-11
+      concave_points_se      3.017556e-16         1.962996e-09
+            symmetry_se      2.119171e-10         4.848754e-16
+   fractal_dimension_se      1.376095e-24         4.148738e-10
+           radius_worst      9.114969e-01         2.032283e-03
+          texture_worst      3.576945e-05         8.015658e-03
+        perimeter_worst      8.423582e-01         4.164113e-04
+             area_worst      1.741516e-02         1.071377e-08
+       smoothness_worst      4.814725e-02         4.899106e-02
+      compactness_worst      5.888404e-10         4.680168e-07
+        concavity_worst      2.111598e-18         7.275838e-06
+   concave_points_worst      4.570474e-02         3.641709e-01
+         symmetry_worst      6.461410e-01         8.380327e-07
+fractal_dimension_worst      1.033864e-11         5.165028e-09
+
+2. WELCH'S TWO-SAMPLE t-TEST
+----------------------------------------------------------------------
+                feature  t_statistic      p_value
+            radius_mean   -22.208798 1.684459e-64
+           texture_mean   -11.022087 3.019055e-25
+         perimeter_mean   -22.935314 1.023141e-66
+              area_mean   -19.640990 3.284366e-52
+        smoothness_mean    -9.297355 5.573331e-19
+       compactness_mean   -15.818246 9.607863e-42
+         concavity_mean   -20.332425 3.742121e-58
+    concave_points_mean   -24.844810 3.127316e-71
+          symmetry_mean    -8.112198 5.957651e-15
+ fractal_dimension_mean     0.296866 7.667216e-01
+              radius_se   -13.300706 1.491133e-30
+             texture_se     0.207865 8.354171e-01
+           perimeter_se   -12.832763 6.868553e-29
+                area_se   -12.155556 2.983568e-26
+          smoothness_se     1.622869 1.052970e-01
+         compactness_se    -7.082641 6.341807e-12
+           concavity_se    -6.916305 1.266514e-11
+      concave_points_se   -10.735452 4.042197e-24
+            symmetry_se     0.142055 8.871223e-01
+   fractal_dimension_se    -2.036236 4.220238e-02
+           radius_worst   -24.829745 3.556557e-71
+          texture_worst   -12.264826 5.198708e-30
+        perimeter_worst   -25.332210 1.032730e-72
+             area_worst   -20.570814 4.937924e-54
+       smoothness_worst   -10.819553 3.474376e-24
+      compactness_worst   -15.156872 1.749835e-38
+        concavity_worst   -19.595726 9.852484e-59
+   concave_points_worst   -29.117659 1.061454e-96
+         symmetry_worst    -9.529504 6.562499e-19
+fractal_dimension_worst    -7.322730 2.041904e-12
+
+Significant features (p < 0.05): 26 out of 30
+
+3. HIGHLY CORRELATED FEATURE PAIRS
+----------------------------------------------------------------------
+Criterion: |r| > 0.95
+
+      feature_1       feature_2  correlation  absolute_correlation
+    radius_mean  perimeter_mean     0.997815              0.997815
+   radius_worst perimeter_worst     0.993719              0.993719
+    radius_mean       area_mean     0.986740              0.986740
+ perimeter_mean       area_mean     0.985960              0.985960
+   radius_worst      area_worst     0.983107              0.983107
+perimeter_worst      area_worst     0.976665              0.976665
+      radius_se    perimeter_se     0.974705              0.974705
+ perimeter_mean perimeter_worst     0.970006              0.970006
+ perimeter_mean    radius_worst     0.969332              0.969332
+    radius_mean    radius_worst     0.969256              0.969256
+    radius_mean perimeter_worst     0.964439              0.964439
+      area_mean    radius_worst     0.960725              0.960725
+      area_mean      area_worst     0.958177              0.958177
+      area_mean perimeter_worst     0.956714              0.956714
+      radius_se         area_se     0.951558              0.951558
+
+4. VARIANCE INFLATION FACTOR
+----------------------------------------------------------------------
+                feature         VIF
+         perimeter_mean 4110.573130
+            radius_mean 4041.752147
+           radius_worst  799.619693
+        perimeter_worst  419.638192
+              area_mean  348.192488
+             area_worst  326.077517
+              radius_se   80.885287
+           perimeter_se   78.795991
+         concavity_mean   74.853098
+    concave_points_mean   70.731045
+       compactness_mean   58.557894
+                area_se   42.553059
+   concave_points_worst   38.730263
+      compactness_worst   37.275819
+        concavity_worst   32.899787
+fractal_dimension_worst   20.852176
+          texture_worst   18.375490
+           concavity_se   17.828092
+ fractal_dimension_mean   15.719572
+         compactness_se   15.476453
+       smoothness_worst   12.025191
+      concave_points_se   11.939938
+           texture_mean   11.859996
+   fractal_dimension_se   10.790887
+         symmetry_worst    9.664872
+        smoothness_mean    9.092884
+            symmetry_se    5.295883
+          symmetry_mean    4.336008
+             texture_se    4.062792
+          smoothness_se    3.840917
+
+5. FEATURE REDUCTION
+----------------------------------------------------------------------
+Original number of features: 30
+Removed features: perimeter_mean, area_mean, perimeter_se, area_se, radius_worst, perimeter_worst, area_worst
+Remaining features: 23

@@ -6,7 +6,7 @@ The project combines **descriptive statistics, hypothesis testing, correlation a
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 Breast cancer diagnosis involves distinguishing malignant tumors from benign tumors using quantitative characteristics extracted from digitized images of fine-needle aspirate (FNA) samples.
 
@@ -24,7 +24,7 @@ This project investigates whether statistical and probabilistic techniques can b
 
 ---
 
-# 🎯 Objectives
+# Objectives
 
 The main objectives of this project are:
 
@@ -46,7 +46,7 @@ The main objectives of this project are:
 
 ---
 
-# 📊 Dataset
+# Dataset
 
 The project uses the **Breast Cancer Wisconsin (Diagnostic)** dataset.
 
@@ -78,7 +78,7 @@ The dataset contains measurements derived from digitized images of breast mass c
 
 ---
 
-# 🔬 Methodology
+# Methodology
 
 The complete analytical pipeline is:
 
@@ -134,7 +134,7 @@ Gaussian NB    Logistic Regression
 
 ---
 
-# 🧹 1. Data Preprocessing
+# 1. Data Preprocessing
 
 The dataset is loaded from `data/wdbc.data`.
 
@@ -163,7 +163,7 @@ Stratification preserves the benign/malignant class proportions between the trai
 
 ---
 
-# 📈 2. Descriptive Analysis
+# 2. Descriptive Analysis
 
 The class distribution is first examined to understand the composition of the dataset.
 
@@ -173,7 +173,7 @@ The dataset contains more benign observations than malignant observations, with 
 
 ---
 
-# 🧪 3. Normality Analysis
+# 3. Normality Analysis
 
 The **Shapiro-Wilk test** was applied to feature distributions within the benign and malignant training subsets.
 
@@ -196,7 +196,7 @@ Rather than treating this assumption as automatically valid, the model is evalua
 
 ---
 
-# 🔬 4. Welch's Two-Sample t-Test
+# 4. Welch's Two-Sample t-Test
 
 Welch's independent two-sample t-test was used to investigate whether individual features have significantly different means between benign and malignant tumors.
 
@@ -230,7 +230,7 @@ This analysis provides statistical evidence that many of the measured tumor char
 
 ---
 
-# 🔗 5. Pearson Correlation Analysis
+# 5. Pearson Correlation Analysis
 
 Pearson correlation was used to identify linear relationships between predictors.
 
@@ -261,7 +261,7 @@ These relationships indicate substantial redundancy among several geometric meas
 
 ---
 
-# 📐 6. Multicollinearity Analysis using VIF
+# 6. Multicollinearity Analysis using VIF
 
 The **Variance Inflation Factor (VIF)** was calculated to quantify multicollinearity.
 
@@ -292,7 +292,7 @@ These values demonstrate substantial multicollinearity among the original predic
 
 ---
 
-# ✂️ 7. Feature Reduction
+# 7. Feature Reduction
 
 To reduce redundant information, seven highly redundant predictors were removed:
 
@@ -318,7 +318,7 @@ Importantly, feature reduction was performed as an analytical experiment rather 
 
 ---
 
-# 🤖 8. Machine Learning Models
+# 8. Machine Learning Models
 
 Two primary classification approaches were investigated.
 
@@ -368,7 +368,7 @@ Logistic Regression was evaluated using both:
 
 ---
 
-# 📊 9. Model Comparison
+# 9. Model Comparison
 
 The models were evaluated on the held-out test set using accuracy, sensitivity, specificity, precision, F1-score, Brier score, ROC-AUC, and log loss.
 
@@ -384,7 +384,7 @@ The reduced model retained strong predictive performance but showed a small decr
 
 ---
 
-# 📉 10. ROC Analysis
+# 10. ROC Analysis
 
 ROC curves were used to evaluate discrimination across different classification thresholds.
 
@@ -406,7 +406,7 @@ ROC-AUC = 0.9924
 
 ---
 
-# 🎯 11. Decision Threshold Optimization
+# 11. Decision Threshold Optimization
 
 A default binary classifier commonly uses:
 
@@ -462,7 +462,7 @@ The threshold of 0.30 was therefore locked before evaluating the final test-set 
 
 ---
 
-# 🧪 12. Final Test-Set Evaluation
+# 12. Final Test-Set Evaluation
 
 After selecting the threshold using only the training data through cross-validation, the locked threshold of **0.30** was applied to the unseen test set.
 
@@ -504,7 +504,7 @@ The optimized threshold improves sensitivity compared with the default 0.50 thre
 
 ---
 
-# 📚 Statistical Concepts Demonstrated
+# Statistical Concepts Demonstrated
 
 This project demonstrates the practical application of several Probability and Statistics concepts:
 
@@ -558,7 +558,7 @@ Used to select a classification threshold balancing sensitivity and specificity.
 
 ---
 
-# 📁 Project Structure
+# Project Structure
 
 ```text
 breast-cancer-classification/
@@ -598,7 +598,7 @@ breast-cancer-classification/
 
 ---
 
-# ⚙️ Installation
+# Installation
 
 Clone the repository:
 
@@ -627,7 +627,7 @@ pip install -r requirements.txt
 
 ---
 
-# ▶️ Running the Project
+# Running the Project
 
 The individual analysis stages can be executed from the project root.
 
@@ -669,7 +669,7 @@ python src/visualization.py
 
 ---
 
-# 🔁 Reproducibility
+# Reproducibility
 
 The project is designed so that the major analytical steps can be reproduced from the source code.
 
@@ -689,7 +689,7 @@ The raw dataset, source code, generated statistical results, and figures are inc
 
 ---
 
-# ⚠️ Limitations
+# Limitations
 
 Several limitations should be considered when interpreting the results:
 
@@ -702,7 +702,7 @@ Several limitations should be considered when interpreting the results:
 
 ---
 
-# 🚀 Future Work
+# Future Work
 
 Potential extensions include:
 
@@ -719,7 +719,7 @@ Potential extensions include:
 
 ---
 
-# 🏁 Key Findings
+# Key Findings
 
 The major findings of the study are:
 
@@ -735,7 +735,7 @@ The major findings of the study are:
 
 ---
 
-# 🛠️ Technologies Used
+# Technologies Used
 
 - Python
 - Pandas
@@ -749,7 +749,7 @@ The major findings of the study are:
 
 ---
 
-# 📌 Project Status
+# Project Status
 
 **Completed**
 
@@ -757,7 +757,7 @@ The current repository contains the complete preprocessing, statistical analysis
 
 ---
 
-## 📄 Dataset Reference
+## Dataset Reference
 
 The project uses the Breast Cancer Wisconsin (Diagnostic) dataset originally provided through the UCI Machine Learning Repository.
 

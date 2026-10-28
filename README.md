@@ -527,7 +527,7 @@ Shapiro-Wilk testing investigates the normality assumption of feature distributi
 Pearson correlation identifies strongly related predictors.
 
 ### Multicollinearity
-VIF quantifies redundancy among predictors.
+Variance Inflation Factor(VIF) quantifies redundancy among predictors.
 
 ### Maximum Likelihood Estimation
 Logistic Regression parameters are estimated through likelihood-based optimization.

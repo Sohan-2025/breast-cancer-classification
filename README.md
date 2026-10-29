@@ -634,37 +634,37 @@ The individual analysis stages can be executed from the project root.
 ### Statistical analysis
 
 ```bash
-python src/statistical_analysis.py
+python -m src.statistical_analysis
 ```
 
 ### Model training
 
 ```bash
-python src/models.py
+python -m src.models
 ```
 
 ### Model evaluation
 
 ```bash
-python src/evaluation.py
+python -m src.evaluation
 ```
 
 ### Threshold optimization
 
 ```bash
-python src/threshold_selection.py
+python -m src.threshold_selection
 ```
 
 ### Final evaluation
 
 ```bash
-python src/final_evaluation.py
+python -m src.final_evaluation
 ```
 
 ### Generate visualizations
 
 ```bash
-python src/visualization.py
+python -m src.visualization
 ```
 
 ---

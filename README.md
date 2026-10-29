@@ -341,7 +341,7 @@ The model provides a direct probabilistic interpretation of classification.
 
 ## Logistic Regression
 
-Logistic Regression models the probability of malignancy using:
+Logistic Regression models the probability of malignancy using: 
 
 \[
 P(Y=1|X)
